@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komplexní Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>Dashboard</h1>
+            <nav>
+                <a href="#" class="nav-link" data-target="overview">Home</a>
+                <a href="#" class="nav-link" data-target="reports">Reports</a>
+                <a href="#" class="nav-link" data-target="analytics">Analytics</a>
+                <a href="#" class="nav-link" data-target="settings">Settings</a>
+                <a href="#" class="nav-link" data-target="profile">Profile</a>
+            </nav>
+            <footer>
+                <p>© 2024 Dashboard Inc.</p>
+            </footer>
+        </aside>
+        <div class="main-content">
+            <div id="overview" class="page">
+                <div class="header">
+                    <h2>Overview</h2>
+                    <div class="search">
+                        <input type="text" placeholder="Search...">
+                        <button>Search</button>
+                    </div>
+                </div>
+                <div class="dashboard-widgets">
+                    <div class="widget">
+                        <h3>Sales Overview</h3>
+                        <canvas id="salesChart" class="chart"></canvas>
+                    </div>
+                    <div class="widget">
+                        <h3>User Engagement</h3>
+                        <canvas id="engagementChart" class="chart"></canvas>
+                    </div>
+                    <div class="widget">
+                        <h3>Revenue</h3>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <h4>Total Revenue</h4>
+                                <p>$12,345</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>Monthly Growth</h4>
+                                <p>+8%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <h3>Recent Activities</h3>
+                        <div class="recent-activities">
+                            <ul>
+                                <li>
+                                    <div class="activity">
+                                        <p>User John Doe signed up.</p>
+                                        <p class="timestamp">10 mins ago</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="activity">
+                                        <p>System updated successfully.</p>
+                                        <p class="timestamp">30 mins ago</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="activity">
+                                        <p>New message from admin.</p>
+                                        <p class="timestamp">1 hour ago</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more page sections here if needed -->
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
