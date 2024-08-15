@@ -1,0 +1,101 @@
+/* Základní styly */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f06, #f79);
+    overflow: hidden;
+}
+
+/* Kontejner pro obsah */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 1200px;
+}
+
+/* Hlavní obsah */
+.content {
+    text-align: center;
+    position: relative;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Text */
+.text h1 {
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    animation: textAnimation 4s infinite;
+    position: relative;
+    display: inline-block;
+}
+
+/* Animace textu */
+@keyframes textAnimation {
+    0% {
+        transform: scale(1) rotate(0deg);
+        color: #fff;
+    }
+    50% {
+        transform: scale(1.2) rotate(10deg);
+        color: #ff0;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        color: #fff;
+    }
+}
+
+/* Efekt pozadí */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+body {
+    background: linear-gradient(135deg, #f06, #f79);
+    background-size: 200% 200%;
+    animation: backgroundAnimation 10s ease infinite;
+}
+
+/* Efekt textu s gradientem a stínem */
+.text h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,0,150,0.5), rgba(0,204,255,0.5));
+    z-index: -1;
+    filter: blur(5px);
+    opacity: 0.5;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
